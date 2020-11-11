@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>chuyển đỏi tiên tệ</title>
+</head>
+<body>
+<table>
+    <tr>
+        <th>Amount</th>
+        <th>From Currency</th>
+        <th>To Currency</th>
+    </tr>
+    <tr>
+        <td><input type="text" id="Amount"></td>
+        <td><select id="select1" onchange="Myfuntion()">
+            <option value="23000">VietNam</option>
+            <option value="1">USD</option>
+        </select></td>
+        <td><select id="select2" onchange="Myfuntion()">
+            <option value="23000">VietNam</option>
+            <option value="1">USD</option>
+        </select></td>
+        <td><button onclick="Myfunction()">Convert</button></td>
+    </tr>
+</table>
+<p id="ketqua"></p>
+</body>
+<script>
+   function Myfunction(){
+       let Amount= parseInt(document.getElementById("Amount").value);
+       let dauvao = select1.value;
+       let daura = select2.value;
+       let ketqua = Amount*daura/dauvao;
+       document.getElementById('ketqua').innerHTML = ketqua;
+
+   }
+
+
+</script>
+</html>
